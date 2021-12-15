@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_11_28_080105) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "teams", force: :cascade do |t|
+  create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
